@@ -6,6 +6,9 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Movie {
 
+
+    
+
     public Movie(){
         title = "null";
         actor = "null";

@@ -19,7 +19,7 @@ public class FinalProjectDriver {
 
     public static void main(String[] args){
         
-        movieList = Populator.startinglistMovie();
+        //movieList = Populator.startinglistMovie();
 
         // user needs a value probably bool and varriable call manager
 
@@ -32,9 +32,13 @@ public class FinalProjectDriver {
             System.out.println("Enter Password:");
             userpassword = UserInput.nextInt();
             if(userpassword == managerPIN){
-                manager = true;
-                System.out.println("Welcome Manager");
                 
+                Manager.Start();
+                
+                //manager = true;
+                //System.out.println("Welcome Manager");
+                
+                /* 
                 do {
                     UserPromps.getUserprompts(manager);
                     userchoice = UserInput.nextInt();
@@ -97,16 +101,20 @@ public class FinalProjectDriver {
                     }
 
                 }while(userchoice != 8);
-
+                */
             }
             else{
-                System.out.println("Incorect password");
+                User.Start();
+
+                //System.out.println("Incorect password");
             }
 
             case 1:
-            System.out.println("Welcome User");
-            UserPromps.getUserprompts();
 
+            User.Start();
+            //System.out.println("Welcome User");
+            //UserPromps.getUserprompts();
+            /* 
             do {
                 UserPromps.getUserprompts(!manager);
                 userchoice = UserInput.nextInt();
@@ -146,7 +154,7 @@ public class FinalProjectDriver {
                 }
                     
             }while(userchoice != 6);
-
+            */
         }
         
 
