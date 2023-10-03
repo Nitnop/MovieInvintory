@@ -108,7 +108,7 @@ public class FinalProjectDriver {
             UserPromps.getUserprompts();
 
             do {
-                UserPromps.getUserprompts(manager);
+                UserPromps.getUserprompts(!manager);
                 userchoice = UserInput.nextInt();
 
                 switch(userchoice){
