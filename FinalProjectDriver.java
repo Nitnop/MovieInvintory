@@ -29,8 +29,8 @@ public class FinalProjectDriver {
 
         switch(userchoice){
             case 0:
-            System.out.println("Enter Password:");
-            userpassword = UserInput.nextInt();
+            System.out.println("Enter Pin1:");
+            userpassword = Idiotproofing.idiotResistnantInt();
             if(userpassword == managerPIN){
                 
                 Manager.Start();

@@ -3,12 +3,15 @@ public class Manager extends User {
     
 
     public static void Start(){
-    
-    
+        
+        
+        UserInput.nextLine();
+        //userchoice = 0;
+
         do {
         
             UserPromps.getUserprompts(true);
-        
+            
             userchoice = Idiotproofing.idiotResistnantInt();
 
         switch(userchoice){
@@ -23,11 +26,12 @@ public class Manager extends User {
             break;
 
             case 3:
+            printMovieList();
             //UserInput.nextLine();
-            AtoZmovieTitleList = Movie.sortTitleAtoZ(movieList);
-            for(Movie movtitle : AtoZmovieTitleList){
-                System.out.println(movtitle);
-            }                            
+            //AtoZmovieTitleList = Movie.sortTitleAtoZ(movieList);
+            //for(Movie movtitle : AtoZmovieTitleList){
+            //    System.out.println(movtitle.title);
+            //}                            
             break;
 
             case 4:

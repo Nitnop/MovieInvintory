@@ -15,10 +15,10 @@ public class User extends Movie{
     public static void Start(){
 
         movieList = Populator.startinglistMovie();
+        UserInput.nextLine();
+        userchoice = 0;
 
-        
-
-        do {
+        while(userchoice != 6) {
             
             UserPromps.getUserprompts();
             
@@ -47,20 +47,38 @@ public class User extends Movie{
                 break;
 
                 case 5:
-                //UserInput.nextLine();
+
+                printMovieList();
+                /*UserInput.nextLine();
                     AtoZmovieTitleList = Movie.sortTitleAtoZ(movieList);
+                    System.out.println("\n");
                     for(Movie movtitle : AtoZmovieTitleList){
                         System.out.println(movtitle);
-                    }                            
+                    }
+                    System.out.println("\n");  */                          
                     break;
 
                 default:
+                
+                System.out.println();
+                System.out.println();
                 System.out.println("Stop trying to break my shit and enter a number 1 - 6");
+                System.out.println();
+                System.out.println();
             }
                 
-        }while(userchoice != 6);
+        }
+        //while(userchoice != 6);
 
-    }    
-
+    }
+    
+    public static void printMovieList(){
+        AtoZmovieTitleList = Movie.sortTitleAtoZ(movieList);
+        System.out.println("\n");
+        for(Movie movtitle : AtoZmovieTitleList){
+            System.out.println(movtitle);
+            }
+        System.out.println("\n");
+        }
     
 }
