@@ -1,21 +1,21 @@
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.concurrent.CopyOnWriteArrayList;
+//import java.util.concurrent.CopyOnWriteArrayList;
 
 public class FinalProjectDriver {
     
     static Scanner UserInput = new Scanner(System.in);
     static int managerPIN = 1234;
     static Boolean manager = false;
-    static CopyOnWriteArrayList<Movie> movieList = new CopyOnWriteArrayList<Movie>();
-    static ArrayList<Movie> AtoZmovieTitleList = new ArrayList<Movie>();
+    //static CopyOnWriteArrayList<Movie> movieList = new CopyOnWriteArrayList<Movie>();
+    //static ArrayList<Movie> AtoZmovieTitleList = new ArrayList<Movie>();
     static int userpassword;
-    static String title;
-    static String actor;
-    static String genre;
-    static String year;
-    static String titleSearch;
-    static int numOfindexToRemove;
+    //static String title;
+    //static String actor;
+    //static String genre;
+    //static String year;
+    //static String titleSearch;
+    //static int numOfindexToRemove;
 
     public static void main(String[] args){
         

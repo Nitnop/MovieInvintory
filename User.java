@@ -28,22 +28,22 @@ public class User extends Movie{
                 
                 case 1:
                 //UserInput.nextLine();
-                Movie.SearchTitle(movieList);
+                SearchTitle(movieList);
                 break;
 
                 case 2:
                 //UserInput.nextLine();
-                Movie.SearchActor(movieList);
+                SearchActor(movieList);
                 break;
 
                 case 3:
                 //UserInput.nextLine();
-                Movie.SearchGenre(movieList);
+                SearchGenre(movieList);
                 break;
 
                 case 4:
                 //UserInput.nextLine();
-                Movie.SearchYear(movieList);
+                SearchYear(movieList);
                 break;
 
                 case 5:
