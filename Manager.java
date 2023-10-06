@@ -5,13 +5,16 @@ abstract class Manager extends User {
     
 
     public static void Start(){
-        
-        
-        UserInput.nextLine();
-        //userchoice = 0;
 
-        do {
+        movieList = Populator.startinglistMovie();
+        //System.out.println("here1");
         
+        //UserInput.nextLine();
+        //UserInput.nextLine();
+        userchoice = 0;
+
+        do{
+            //System.out.println("here2");
             UserPromps.getUserprompts(true);
             
             userchoice = Idiotproofing.idiotResistnantInt();
@@ -23,7 +26,7 @@ abstract class Manager extends User {
             
 
             case 2:
-            //UserInput.nextLine();
+            UserInput.nextLine();
             removeMovie(movieList);
             break;
 
@@ -42,22 +45,24 @@ abstract class Manager extends User {
             break;
 
             case 5:
-            //UserInput.nextLine();
+            UserInput.nextLine();
             SearchActor(movieList);
             break;
 
             case 6:
-            //UserInput.nextLine();
+            UserInput.nextLine();
             SearchGenre(movieList);
             break;
 
             case 7:
-            //UserInput.nextLine();
+            UserInput.nextLine();
             SearchYear(movieList);
             break;
 
-            //case 8:
-            //break;
+            case 8:
+            System.out.println("Exiting....");
+            System.exit(0);
+            break;
 
             default:
             System.out.println("Stop trying to break my shit and enter a number 1 - 8");

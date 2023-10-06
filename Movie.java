@@ -30,6 +30,7 @@ public class Movie {
     protected String actor;
     protected String genre;
     protected String year;
+    static int searchHits;
 
     
     static Scanner UserInput = new Scanner(System.in);
@@ -138,19 +139,22 @@ public class Movie {
         
         titleSearch = UserInput.next();
 
+        
         for (Movie movieTitle : movieList){
 
             if (movieTitle.getTitle() != null && movieTitle.getTitle().contains(titleSearch)){
                                                                 
+                searchHits++;
                 System.out.println(movieTitle);
 
                 checkInStock();
             }
 
-            else {
-                System.out.println("No results...");
-            }
         }
+        if (searchHits == 0){
+            System.out.println("No results...");
+        }
+        searchHits = 0; 
     }
 
     public static void SearchActor(CopyOnWriteArrayList<Movie> movieList){
@@ -198,7 +202,7 @@ public class Movie {
 
         for (Movie movieYear : movieList){
 
-            if (movieYear.getYear() != null && movieYear.getYear().contains(YearSearch)){
+            if (movieYear.getYear() != null && movieYear.getYear().equals(YearSearch)){
                                                                 
                 System.out.println(movieYear);
             }

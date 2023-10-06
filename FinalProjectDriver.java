@@ -25,13 +25,16 @@ public class FinalProjectDriver {
 
         System.out.println("Login = 0\nContinue without login = 1");
 
-        int userchoice = UserInput.nextInt();
+        int userchoice = Idiotproofing.idiotResistnantInt();
 
         switch(userchoice){
             case 0:
-            System.out.println("Enter Pin1:");
+            System.out.println("Enter Pin:  (It's 1234)");
             userpassword = Idiotproofing.idiotResistnantInt();
+
+            System.out.println("I have no idea why it is stalling here I suspect its the buffer but I cant make it work\n so please just type '1' and hit enter to advance the program");
             if(userpassword == managerPIN){
+            
                 
                 Manager.Start();
                 

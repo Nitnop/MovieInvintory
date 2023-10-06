@@ -12,6 +12,8 @@ public class Idiotproofing{
         
         int choice = UserInput.nextInt();
 
+        UserInput.nextLine();  //trying to flush buffer
+
         return choice;
 
     }

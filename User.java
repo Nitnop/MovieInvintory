@@ -15,7 +15,7 @@ public class User extends Movie{
     public static void Start(){
 
         movieList = Populator.startinglistMovie();
-        UserInput.nextLine();
+        //UserInput.next();
         userchoice = 0;
 
         while(userchoice != 6) {
@@ -57,6 +57,14 @@ public class User extends Movie{
                     }
                     System.out.println("\n");  */                          
                     break;
+
+                case 6:
+
+                System.out.println("Exiting....");
+                System.exit(0);
+                break;
+
+                
 
                 default:
                 
