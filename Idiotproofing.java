@@ -16,6 +16,26 @@ public class Idiotproofing{
 
     }
 
+    public static String idiotResistnantString(){
+        
+        while (!UserInput.hasNextLine()) UserInput.next();
+        
+        String stringChoice = UserInput.nextLine();
+
+        return stringChoice;
+
+    }
+
+    public static Boolean idiotResistnantBool(){
+        
+        while (!UserInput.hasNextBoolean()) UserInput.next();
+        
+        Boolean stringChoice = UserInput.nextBoolean();
+
+        return stringChoice;
+
+    }
+
 
     
 }

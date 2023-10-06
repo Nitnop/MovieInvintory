@@ -1,4 +1,6 @@
-public class Manager extends User {
+import java.util.concurrent.CopyOnWriteArrayList;
+
+abstract class Manager extends User {
     
     
 
@@ -22,7 +24,7 @@ public class Manager extends User {
 
             case 2:
             //UserInput.nextLine();
-            Movie.removeMovie(movieList);
+            removeMovie(movieList);
             break;
 
             case 3:
@@ -36,22 +38,22 @@ public class Manager extends User {
 
             case 4:
             //UserInput.nextLine();
-            Movie.SearchTitle(movieList);
+            SearchTitle(movieList);
             break;
 
             case 5:
             //UserInput.nextLine();
-            Movie.SearchActor(movieList);
+            SearchActor(movieList);
             break;
 
             case 6:
             //UserInput.nextLine();
-            Movie.SearchGenre(movieList);
+            SearchGenre(movieList);
             break;
 
             case 7:
             //UserInput.nextLine();
-            Movie.SearchYear(movieList);
+            SearchYear(movieList);
             break;
 
             //case 8:
@@ -82,6 +84,28 @@ public class Manager extends User {
 
     }
 
+    private static void removeMovie(CopyOnWriteArrayList<Movie> movieList){
+        System.out.println("What movie would you like to remove from the library? Enter title");
+                        
+        for (Movie mov : movieList){
+            System.out.println(mov);
+        }
+                        
+        titleSearch = UserInput.next();
+
+        for (Movie movieTitle : movieList){
+
+            if (movieTitle.getTitle() != null && movieTitle.getTitle().contains(titleSearch)){
+                                                                
+                System.out.println(movieTitle);                              
+                numOfindexToRemove = movieList.indexOf(movieTitle);
+                //System.out.println("Are you sure you want to delete " + movieTitle);
+                //System.out.println("yes = 0\nno = 1");
+                //int answer = UserInput.nextInt();
+                movieList.remove(numOfindexToRemove);
+            }                           
+        }    
+    }
 
 
 }

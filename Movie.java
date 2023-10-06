@@ -105,6 +105,8 @@ public class Movie {
         Collections.reverse(ZtoAGenreList);
         return ZtoAGenreList;
     }
+    
+    /* 
     public static void removeMovie(CopyOnWriteArrayList<Movie> movieList){
         System.out.println("What movie would you like to remove from the library? Enter title");
                         
@@ -128,6 +130,8 @@ public class Movie {
         }    
     }
 
+    */
+
     public static void SearchTitle(CopyOnWriteArrayList<Movie> movieList){
 
         System.out.println("Enter the title you'd wish to find...");
@@ -139,6 +143,8 @@ public class Movie {
             if (movieTitle.getTitle() != null && movieTitle.getTitle().contains(titleSearch)){
                                                                 
                 System.out.println(movieTitle);
+
+                checkInStock();
             }
 
             else {
@@ -202,4 +208,13 @@ public class Movie {
             }
         }
     }
+
+    public static void checkInStock(){
+        System.out.println("Lest see if its in stock...");
+        System.out.println(DVD.inStock());
+        System.out.println(VHS.inStock());
+        
+        
+    }
+
 }

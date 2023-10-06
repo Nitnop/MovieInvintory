@@ -2,6 +2,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Populator {
 
+// this would normally be readign in from a file and saving out to a file but I guess thats the final project for this class
+
     public static CopyOnWriteArrayList<Movie> startinglistMovie(){
         CopyOnWriteArrayList<Movie> movieList = new CopyOnWriteArrayList<Movie>();
         //Movie movie;
