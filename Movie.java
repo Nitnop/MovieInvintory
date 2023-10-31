@@ -1,10 +1,11 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class Movie {
+public class Movie implements Serializable {
 
 
     
