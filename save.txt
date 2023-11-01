@@ -1,0 +1,13 @@
+The hunt for red october,Sean Connery,Action,1985
+Terminator,Arnold Schwarzenegger,Action,1984
+Indiana Jones and the Last Crusade,Harrison Ford,action,1989
+Akira,Katsuhiro Otomo,Sci-fi/Action,1988
+Hook,Robin Williams,Fantacy,1991
+Groundhog Day,Bill Murray,Comedy/Romance,1993
+Army of Darkness,Bruce Campbell,Horror/Fantasy,1992
+Buffy the Vampire Slayer,Kristy Swanson,Horror/Fantasy,1992
+Ghost,Patrick Swayze,Romance/Fantasy,1990
+Edward Scissorhands,Johnny Depp,Fantasy/Romance,1990
+Die Hard,Bruce Willis,Action,1988
+Fern Gully,Robin Williams,Fantacy,1992
+The Perfect Storm,George Clooney,Thriller,2000

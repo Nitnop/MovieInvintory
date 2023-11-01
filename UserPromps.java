@@ -9,7 +9,8 @@ public class UserPromps {
         System.out.println("To look up a movie by actor enter 5");
         System.out.println("To look up a movie by genre enter 6");
         System.out.println("To look up a movie by year enter 7");
-        System.out.println("You can quit by entering 8");
+        System.out.println("You can save and quit by entering 8");
+        System.out.println("exit without saving enter 9");
     }
 
     static void getUserprompts(){

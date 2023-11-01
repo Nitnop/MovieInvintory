@@ -6,7 +6,8 @@ abstract class Manager extends User {
 
     public static void Start(){
 
-        movieList = Populator.startinglistMovie();
+        movieList = LoadUnload.loadMoviesFromFile();
+        HashMapSearch.MovieSearch(movieList);
         //System.out.println("here1");
         
         //UserInput.nextLine();
@@ -23,10 +24,11 @@ abstract class Manager extends User {
             
             case 1:
             addMovie();
+            break;
             
 
             case 2:
-            UserInput.nextLine();
+            //UserInput.nextLine();
             removeMovie(movieList);
             break;
 
@@ -39,9 +41,10 @@ abstract class Manager extends User {
             //}                            
             break;
 
-            case 4:
-            //UserInput.nextLine();
-            SearchTitle(movieList);
+            case 4: // it works better the way I had it wothout the hash map.......
+            System.out.println("Enter movie title");
+            
+            HashMapSearch.findMovieByTitle(UserInput.nextLine());
             break;
 
             case 5:
@@ -60,16 +63,22 @@ abstract class Manager extends User {
             break;
 
             case 8:
+            System.out.println("Saving and Exiting....");
+            LoadUnload.saveFile(movieList);
+            System.exit(0);
+            break;
+
+            case 9:
             System.out.println("Exiting....");
             System.exit(0);
             break;
 
             default:
-            System.out.println("Stop trying to break my shit and enter a number 1 - 8");
+            System.out.println("Stop trying to break my shit and enter a number 1 - 9");
 
         }
 
-    }while(userchoice != 8);
+    }while(userchoice != 8 || userchoice != 9);
 
 
     }
@@ -85,18 +94,20 @@ abstract class Manager extends User {
             System.out.println("Enter Movie release year...");
             String year = UserInput.nextLine();
             movieList.add(Populator.addMovie(title, actor, genre, year));
-            
-
+            //System.out.println("\n");
     }
 
     private static void removeMovie(CopyOnWriteArrayList<Movie> movieList){
-        System.out.println("What movie would you like to remove from the library? Enter title");
+        System.out.println("What movie would you like to remove from the library?\n Enter title or 'q' to return to main menu");
                         
         for (Movie mov : movieList){
             System.out.println(mov);
         }
                         
         titleSearch = UserInput.next();
+        
+
+        if (titleSearch.equalsIgnoreCase("q")){ return;}
 
         for (Movie movieTitle : movieList){
 
@@ -108,8 +119,10 @@ abstract class Manager extends User {
                 //System.out.println("yes = 0\nno = 1");
                 //int answer = UserInput.nextInt();
                 movieList.remove(numOfindexToRemove);
+                break;
             }                           
-        }    
+        }
+        //System.out.println("\n");    
     }
 
 

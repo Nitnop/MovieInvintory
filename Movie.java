@@ -62,7 +62,7 @@ public class Movie implements Serializable {
         return "[" + title + ", " + actor + ", " + genre + ", " + year + "]";
     }
 
-    public String getTitle(){
+    public  String getTitle(){
         return title;
     }
     public String getActor(){

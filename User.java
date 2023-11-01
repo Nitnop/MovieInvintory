@@ -14,7 +14,7 @@ public class User extends Movie{
 
     public static void Start(){
 
-        movieList = Populator.startinglistMovie();
+        movieList = LoadUnload.loadMoviesFromFile();
         //UserInput.next();
         userchoice = 0;
 
